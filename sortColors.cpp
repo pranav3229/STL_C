@@ -35,7 +35,7 @@ using namespace std;
             i++;
         }
     }
-//dutch national flag algorithm
+//dutch national flag algorithm more optimal- it uses only one loop
 void srt(vector<int> &n){
     int low=0;
     int mid=0;
