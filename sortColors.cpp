@@ -1,12 +1,12 @@
 #include<algorithm>
 #include<vector>
+#include<bits/stdc++.h>
 using namespace std;
-class Solution {
-public:
     void sortColors(vector<int>& nums) {
         int b0 = 0;
         int b1 = 0;
         int b2 = 0;
+        
         
         for (int i = 0; i < nums.size(); i++) {
             if (nums[i] == 0) {
@@ -35,4 +35,23 @@ public:
             i++;
         }
     }
-};
+//dutch national flag algorithm
+void srt(vector<int> &n){
+    int low=0;
+    int mid=0;
+    int high=n.size()-1;
+    while(mid<=high){
+        if(n[mid]==0){
+            swap(n[mid],n[low]);
+            mid++;
+            low++;
+        }
+        else if(n[mid]==1){
+            mid++;
+        }
+        else{
+            swap(n[mid],n[high]);
+            high--;
+        }
+    }
+}
